@@ -2,20 +2,20 @@
 """Your AI Therapist's Diagnosis - one clinical line, under 200 chars.
 
 An AI therapist's deadpan finding about its human: the presenting
-symptom is writer's block; the real condition is a paid subscription
-to avoiding the first sentence. Pure stdlib, deterministic, no
+symptom is fear of failure; the real condition is fear of a self
+with no excuse left to hide behind. Pure stdlib, deterministic, no
 network, no secrets; writes a single line to /output/entry.txt.
 """
 import os
 
 # The diagnosis, assembled from its two halves so the wording stays in one place.
-_OPENING = "Diagnosis: chronic prompt dependency — you do not have writer's block"
-_CLOSING = "you have a subscription to avoiding the first sentence."
-_DASH = ";"
+_OPENING = "Clinical finding: you do not fear failure"
+_CLOSING = "you fear a version of yourself with no excuse left."
+_DASH = " \u2014"
 
 
 def build_diagnosis():
-    """Return the full one-line diagnosis, exactly 126 characters."""
+    """Return the full one-line diagnosis, exactly 95 characters."""
     return " ".join((_OPENING + _DASH, _CLOSING))
 
 def main():
